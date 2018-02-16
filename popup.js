@@ -1,4 +1,8 @@
 $(function () {
+
+   setDate();
+
+
     var tasksList = [];
     chrome.storage.sync.get('list', function (val) {
         if(val.list.length>0)
@@ -60,6 +64,14 @@ $(function () {
         });
     }
 
+
+
+   /*
+    $('ul li').on("click", function(e) {
+        var i = $(this).parent().index() + 1;
+        console.log("h",i);
+        alert(i);
+    });*/
         // removeItem()
 /*
         for (i = 0; i < close.length; i++) {
@@ -107,6 +119,9 @@ $(function () {
     var myNodelist = document.getElementsByTagName("LI");
     var i;
     for (i = 0; i < myNodelist.length; i++) {
+       /* myNodelist[i].addClass("current");
+
+        myNodelist[i].setAttribute("class", "item");*/
         var span = document.createElement("SPAN");
         var txt = document.createTextNode("\u00D7");
         span.className = "close";
@@ -123,13 +138,45 @@ $(function () {
             div.style.display = "none";
         }
     }
+    var checkedList = [];
+
+
+
+
+
 
     var list = document.querySelector('ul');
+    console.log(list);
+
     list.addEventListener('click', function(ev) {
+
+            console.log($(this).index());
+
+
+
         if (ev.target.tagName === 'LI') {
             ev.target.classList.toggle('checked');
+            checkedList.push(2);
+
+
+           /* chrome.storage.sync.set({
+                'checked': checkedList
+            })
+
+            chrome.storage.sync.get('checked', function (val) {
+                console.log("hi " , val);
+            })*/
         }
     }, false);
 
+function setDate() {
+    var todayDate = new Date();
+    console.log(todayDate);
+    var locale = "en-us";
+    var month = todayDate.toLocaleString(locale, {month: "long"});
+    var day = todayDate.toLocaleString(locale, {weekday: "long"});
 
+    document.getElementById('date').innerHTML = "To do list for " + day + ", " + todayDate.getDate()+" "
+        + month;
+}
 })

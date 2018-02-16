@@ -5,8 +5,24 @@
     <title>Task Extension</title>
     <style type="text/css" media="screen">
         body {
+            width: 50%;
             margin: 0;
-            min-width: 250px;
+            min-width: 150px;
+            background: #0b1732;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            horiz-align: center;
         }
 
         /* Include the padding and border in an element's total width and height */
@@ -24,11 +40,13 @@
         ul li {
             cursor: pointer;
             position: relative;
-            padding: 12px 8px 12px 40px;
+            margin: 1px 1px 1px 1px;
+            padding: 12px 16px 12px 40px;
             list-style-type: none;
-            background: #eee;
-            font-size: 18px;
+            background: #eeece5;
+            font-size: 17px;
             transition: 0.2s;
+
 
             /* make the list items unselectable */
             -webkit-user-select: none;
@@ -37,19 +55,19 @@
             user-select: none;
         }
 
-        /* Set all odd list items to a different color (zebra-stripes) */
+       /* !* Set all odd list items to a different color (zebra-stripes) *!
         ul li:nth-child(odd) {
-            background: #f9f9f9;
+            background: #ee3b3d;
         }
-
+*/
         /* Darker background-color on hover */
         ul li:hover {
-            background: #ddd;
+            background: #7492dd;
         }
 
         /* When clicked on, add a background color and strike out text */
         ul li.checked {
-            background: #888;
+            background: #464788;
             color: #fff;
             text-decoration: line-through;
         }
@@ -83,7 +101,8 @@
 
         /* Style the header */
         .header {
-            background-color: #f44336;
+            margin-bottom: 5%;
+            background-color: #f8f8f8;
             padding: 30px 40px;
             color: white;
             text-align: center;
@@ -98,19 +117,21 @@
 
         /* Style the input */
         input {
+            background: #d2d4ee;
             border: none;
             width: 75%;
             padding: 10px;
             float: left;
             font-size: 16px;
+            color:#fff;
         }
 
         /* Style the "Add" button */
         #addButton {
             padding: 10px;
             width: 25%;
-            background: #d9d9d9;
-            color: #555;
+            background: #472b88;
+            color: #f8f8f8;
             float: left;
             text-align: center;
             font-size: 16px;
@@ -121,6 +142,10 @@
         #addButton:hover {
             background-color: #bbb;
         }
+
+        #date{
+            color:#000;
+        }
     </style>
 
     <script src="jquery-3.3.1.min.js"></script>
@@ -128,8 +153,8 @@
 </head>
 <body>
 <div id="addTaskDiv" class="header">
-    <h2 style="margin:5px">List</h2>
-    <input type="text" id="taskInput" placeholder="Title...">
+    <h2 id="date">To do list for </h2>
+    <input type="text" id="taskInput" placeholder=" ">
     <input type="submit" id="addButton"  class="addBtn" value="Add Task">
 </div>
 
