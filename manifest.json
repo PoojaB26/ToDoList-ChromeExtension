@@ -1,5 +1,5 @@
 {
-  "name": "BP New Tab Page",
+  "name": "To do list",
   "description": "Override the new tab page with a blank one",
   "version": "0.9",
   "incognito": "split",

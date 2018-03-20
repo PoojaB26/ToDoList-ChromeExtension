@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Task Extension</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
     <style type="text/css" media="screen">
         body {
             width: 50%;
             margin: 0;
             min-width: 150px;
-            background: #0b1732;
+            background: #dbe2e8;
         }
 
         html, body {
@@ -35,6 +36,9 @@
             margin: 0;
             padding: 0;
         }
+        .container-fluid{
+            text-align: center;
+        }
 
         /* Style the list items */
         ul li {
@@ -43,7 +47,7 @@
             margin: 1px 1px 1px 1px;
             padding: 12px 16px 12px 40px;
             list-style-type: none;
-            background: #eeece5;
+            background: #ffffff;
             font-size: 17px;
             transition: 0.2s;
 
@@ -62,7 +66,8 @@
 */
         /* Darker background-color on hover */
         ul li:hover {
-            background: #7492dd;
+            background: #007bff;
+            color:#fff;
         }
 
         /* When clicked on, add a background color and strike out text */
@@ -101,8 +106,7 @@
 
         /* Style the header */
         .header {
-            margin-bottom: 5%;
-            background-color: #f8f8f8;
+            margin-bottom: 5px;
             padding: 30px 40px;
             color: white;
             text-align: center;
@@ -117,7 +121,7 @@
 
         /* Style the input */
         input {
-            background: #d2d4ee;
+            background: #eaf0ff;
             border: none;
             width: 75%;
             padding: 10px;
@@ -130,9 +134,10 @@
         #addButton {
             padding: 10px;
             width: 25%;
-            background: #472b88;
+            background: #007bff;
             color: #f8f8f8;
             float: left;
+            border: none;
             text-align: center;
             font-size: 16px;
             cursor: pointer;
@@ -145,6 +150,8 @@
 
         #date{
             color:#000;
+            font-size: 20px;
+            ;
         }
     </style>
 
@@ -152,15 +159,29 @@
     <script src="popup.js"></script>
 </head>
 <body>
-<div id="addTaskDiv" class="header">
-    <h2 id="date">To do list for </h2>
-    <input type="text" id="taskInput" placeholder=" ">
-    <input type="submit" id="addButton"  class="addBtn" value="Add Task">
+
+<!--<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">Button</button>
+    </div>
+</div>-->
+
+
+<div id="addTaskDiv " class="header input-group mb-3">
+    <input class="form-control" type="text" id="taskInput" placeholder=" ">
+    <input type="submit" id="addButton"  class="addBtn btn btn-outline-secondary" value="Add Task">
+
 </div>
+<div class="container-fluid">
+    <h2 id="date">To do list for </h2>
+    </div>
 
-<ul id="listUl">
 
+    <ul id="listUl" class="list-group">
 
 </ul>
+<script src="bootstrap.bundle.js"></script>
+
 </body>
 </html>
