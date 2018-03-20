@@ -1,5 +1,5 @@
 # Todos
-Displays your task list for the day everytime you are opening a new ta in Google Chrome
+Displays your task list for the day everytime you are opening a new tab in Google Chrome
 
 
 ![Screenshot](https://github.com/PoojaB26/ToDoList-ChromeExtension/blob/master/screenshot.PNG)
