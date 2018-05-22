@@ -132,7 +132,7 @@
         }
 
         /* Style the "Add" button */
-        #addButton {
+        .addBtn {
             padding: 10px;
             width: 25%;
             background: #007bff;
@@ -145,7 +145,7 @@
             transition: 0.3s;
         }
 
-        #addButton:hover {
+        .addBtn:hover {
             background-color: #bbb;
         }
 
@@ -180,19 +180,45 @@
 </div>-->
 
 
-<div id="addTaskDiv " class="header input-group mb-3">
-    <input class="form-control" type="text" id="taskInput" placeholder=" ">
-    <input type="submit" id="addButton"  class="addBtn btn btn-outline-secondary" value="Add Task">
-
 </div>
-<div class="container-fluid">
-    <h2 id="date">To do list for </h2>
+<div class="row">
+    <div class="col-8" id="todo-section">
+
+        <div id="addTaskDiv" class="header input-group mb-3">
+            <input class="form-control" type="text" id="taskInput" placeholder=" ">
+            <input type="submit" id="addButtonTask"  class="addBtn btn btn-outline-secondary" value="Add Task">
+
+        </div>
+
+    <div class="container-fluid">
+    <h2 id="date">Task checklist for </h2>
     </div>
 
 
-    <ul id="listUl" class="list-group">
+    <ul id="todo-listUl" class="list-group">
 
 </ul>
+    </div>
+    <div class="col-4">
+
+        <div id="addLearnItemDiv" class="header input-group mb-3">
+            <input class="form-control" type="text" id="learnItemInput" placeholder=" ">
+            <input type="submit" id="addButtonLearn"  class="addBtn btn btn-outline-secondary" value="Learn">
+
+        </div>
+
+
+<div class="container-fluid">
+    <h2 id="date">To-learn checklist </h2>
+</div>
+
+
+<ul id="listUl" class="list-group">
+
+</ul>
+    </div>
+</div>
+
 <footer class="copyright">&copy; Copyright 2018 <a href="https://PoojaB26.github.io">Pooja Bhaumik</a></footer>
 
 <script src="bootstrap.bundle.js"></script>

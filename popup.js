@@ -16,7 +16,7 @@ $(function () {
 
     })
 
-    $('#addButton').click(function () {
+    $('#addButtonTask').click(function () {
 
         var newTask = $('#taskInput').val();
         // if(tasksList.length>0)
@@ -34,7 +34,7 @@ $(function () {
 
 
     function addListItem(value) {
-        var ul = document.getElementById("listUl");
+        var ul = document.getElementById("todo-listUl");
         var li = document.createElement("li");
         $("li").addClass("list-group-item");
         li.appendChild(document.createTextNode(value));
@@ -175,7 +175,7 @@ $(function () {
         var month = todayDate.toLocaleString(locale, {month: "long"});
         var day = todayDate.toLocaleString(locale, {weekday: "long"});
 
-        document.getElementById('date').innerHTML = "To do list for " + day + ", " + todayDate.getDate()+" "
+        document.getElementById('date').innerHTML = "Task checklist for " + day + ", " + todayDate.getDate()+" "
             + month;
     }
 })
