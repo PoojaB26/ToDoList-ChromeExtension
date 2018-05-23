@@ -1,7 +1,7 @@
 {
   "name": "To do list",
   "description": "Override the new tab page with your own todolist",
-  "version": "0.2",
+  "version": "0.3",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "popup.html"
