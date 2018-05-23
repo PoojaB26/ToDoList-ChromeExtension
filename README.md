@@ -1,5 +1,5 @@
 # Todos
-Displays your task list for the day everytime you are opening a new tab in Google Chrome
+Displays your to-do tasklist for the day along with to-learn checklist everytime you are opening a new tab in Google Chrome
 
 
 ![Screenshot](https://github.com/PoojaB26/ToDoList-ChromeExtension/blob/master/screenshot.PNG)
@@ -14,6 +14,8 @@ Displays your task list for the day everytime you are opening a new tab in Googl
 
 ## Release History
 
+* 0.3
+    * New Feature! Now separate the to-do tasks from your to-learn checklists. 
 * 0.2
     * New look!
 * 0.1
